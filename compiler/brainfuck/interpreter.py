@@ -25,6 +25,8 @@ class Interpreter(object):
                 str_list.append(chr(machine[mindex]))
             if cmd == ",":
                 input_char = raw_input('Input an ASCII character for position ' + str(mindex) + "\n")
+                if len(input_char) == 0:
+                    return ''.join(str_list)
                 while len(input_char) != 1:
                     input_char = raw_input('Please input a valid ASCII character for position ' + str(mindex) + "\n")
                 while ord(list(input_char)[0]) > 255 or ord(list(input_char)[0]) <= 0:

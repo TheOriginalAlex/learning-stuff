@@ -1,10 +1,12 @@
 import sys
 from interpreter import Interpreter
+import readline
+
 
 def main():
     while True:
         try:
-            text = raw_input('fuck> ')
+            text = raw_input('brainfuck> ')
         except EOFError:
             break
         if not text:
